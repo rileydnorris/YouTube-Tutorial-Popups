@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="blurPopup_Pre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cabin in Woods" translatesAutoresizingMaskIntoConstraints="NO" id="1Ee-aV-a0c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouE-rL-six">
+                                <rect key="frame" x="112.5" y="572" width="150" height="35"/>
+                                <color key="backgroundColor" red="0.29297695150000003" green="0.53452723150000003" blue="0.97360402349999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1cK-eZ-Fxx"/>
+                                    <constraint firstAttribute="height" constant="35" id="lqf-Me-emO"/>
+                                </constraints>
+                                <state key="normal" title="Show Popup">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3M-YB-VTW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ouE-rL-six" secondAttribute="bottom" constant="60" id="CxI-Eq-EIM"/>
+                            <constraint firstItem="ouE-rL-six" firstAttribute="centerX" secondItem="1Ee-aV-a0c" secondAttribute="centerX" id="D32-wd-Cgz"/>
+                            <constraint firstItem="1Ee-aV-a0c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fSr-Mo-EPI"/>
+                            <constraint firstItem="1Ee-aV-a0c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jec-EP-kML"/>
+                            <constraint firstItem="1Ee-aV-a0c" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nBh-2U-k44"/>
+                            <constraint firstItem="1Ee-aV-a0c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ozo-H1-kKF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="hE0-2N-U8Q" id="OzJ-Le-R4J"/>
+                        <outlet property="doneButton" destination="n2U-Ma-3q5" id="HMK-c4-BM1"/>
+                        <outlet property="popupView" destination="tEN-jt-0Rn" id="eZh-Ku-FdI"/>
+                        <outlet property="showButton" destination="ouE-rL-six" id="ufQ-Hk-Xc4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="hE0-2N-U8Q">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UWO-TB-vLS">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" id="tEN-jt-0Rn">
+                    <rect key="frame" x="0.0" y="0.0" width="334" height="219"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2U-Ma-3q5">
+                            <rect key="frame" x="0.0" y="179" width="334" height="40"/>
+                            <color key="backgroundColor" red="0.29297695153640557" green="0.53452723148969505" blue="0.97360402345657349" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="MFi-Qa-7IU"/>
+                            </constraints>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="doneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o96-tx-7iM"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the popup!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oez-Db-M4q">
+                            <rect key="frame" x="15" y="30" width="304" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="xTa-JA-Ph3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now you've seen the popup, click done to return to the main page" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-sN-jwa">
+                            <rect key="frame" x="30" y="85" width="274" height="64"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Fah-sN-jwa" secondAttribute="trailing" constant="30" id="2qs-6J-A6g"/>
+                        <constraint firstItem="n2U-Ma-3q5" firstAttribute="bottom" secondItem="35E-NB-xth" secondAttribute="bottom" id="CyS-ba-b4q"/>
+                        <constraint firstItem="35E-NB-xth" firstAttribute="trailing" secondItem="Oez-Db-M4q" secondAttribute="trailing" constant="15" id="WsU-eT-AGc"/>
+                        <constraint firstItem="Oez-Db-M4q" firstAttribute="leading" secondItem="35E-NB-xth" secondAttribute="leading" constant="15" id="WvU-Lb-MKZ"/>
+                        <constraint firstItem="Oez-Db-M4q" firstAttribute="top" secondItem="35E-NB-xth" secondAttribute="top" constant="30" id="bCx-LL-eQW"/>
+                        <constraint firstItem="n2U-Ma-3q5" firstAttribute="top" secondItem="Fah-sN-jwa" secondAttribute="bottom" constant="30" id="hAe-T9-dLe"/>
+                        <constraint firstItem="Fah-sN-jwa" firstAttribute="leading" secondItem="35E-NB-xth" secondAttribute="leading" constant="30" id="pNJ-m4-BVx"/>
+                        <constraint firstItem="Fah-sN-jwa" firstAttribute="top" secondItem="Oez-Db-M4q" secondAttribute="bottom" constant="30" id="tel-NG-uVx"/>
+                        <constraint firstItem="35E-NB-xth" firstAttribute="trailing" secondItem="n2U-Ma-3q5" secondAttribute="trailing" id="xSw-IP-HKy"/>
+                        <constraint firstItem="n2U-Ma-3q5" firstAttribute="leading" secondItem="35E-NB-xth" secondAttribute="leading" id="z1x-46-xwI"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="35E-NB-xth"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cabin in Woods" width="691.20001220703125" height="432"/>
+    </resources>
+</document>
