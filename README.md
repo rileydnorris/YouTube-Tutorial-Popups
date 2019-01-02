@@ -1,4 +1,4 @@
-## Card Tutorial
+## Pop-Up with Blur Tutorial
 
 This is the repository for the YouTube video "How to Create a Pop-Up with Blur in Swift/Xcode". This video can be found [here](https://youtu.be/Co6mnk5gJW4).
 
